@@ -1,11 +1,13 @@
+<!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I am Wipwib</title>
+    <title>I am WiPWiB</title>
     <meta name="twitter:card" content="summary_large_image">
-    <meta property="og:title" content="I am Wipwib">
-    <meta property="twitter:title" content="I am Wipwib">
+    <meta property="og:title" content="I am WiPWiB">
+    <meta property="twitter:title" content="I am WiPWiB">
     <meta property="og:type" content="website">
     <meta name="Description" content="ชื่อพัดครับยินดีที่ได้รู้จักครับ 😁">
     <meta property="og:description" content="ชื่อพัดครับยินดีที่ได้รู้จักครับ 😁">
@@ -18,37 +20,73 @@
     <meta property="og:image:height" content="512">
     <link rel="icon" href="https://wipwib.github.io/source/img/wipwib_img.ico">
     <meta name="theme-color" content="#0077ff">
-    <link rel="stylesheet" href="./source/css/wipwib.css">
-    <link rel="stylesheet" href="https://wipwib.github.io/source/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://wipwib.github.io/source/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://wipwib.github.io/source/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://wipwib.github.io/source/css/wipwib.css">
     <style>
-        .top_404 {
-            color: rgb(255, 255, 255);
-            font-weight: bold;
-            font-size: 90px;
-            text-shadow: -1px -1px 0 #000000e1, 1px -1px 0 #000000e1, -1px 1px 0 #000000e1, 1px 1px 0 #000000e1;
+        h1 {
+            font-size: 20vh;
+            text-align: center;
         }
 
-        .top_b_404 {
-            font-size: 18px;
-            color: rgb(255, 255, 255);
-            text-shadow: -1px -1px 0 #000000e1, 1px -1px 0 #000000e1, -1px 1px 0 #000000e1, 1px 1px 0 #000000e1;
+        h2 {
+            text-align: center;
         }
     </style>
 </head>
+
 <body>
-    <div class="hero">
-        <div class="container" style="margin-top: 6%">
-            <div class="row">
-                <div class="text-center">
-                    <div class="header">
-                        <h4 class="top_404">404</h4>
-                        <h4 class="top_b_404">ไซต์ที่กําหนดค่าตามที่อยู่นี้ไม่ มีไฟล์ที่ร้องขอ</h4>
-                    </div>
-                </div>
-            </div>
+    <section>
+        <div class="header">
+            <h1>404</h1>
+            <h2>ไซต์ที่กําหนดค่าตามที่อยู่นี้ไม่ มีไฟล์ที่ร้องขอ</h2>
         </div>
-    </div>
+    </section>
+    <script type="text/javascript">
+        function disableselect(e)
+        {
+            if (omitformtags.indexOf(e.target.tagName.toLowerCase())==-1)
+            return false
+        }
+        function reEnable()
+        {
+            return true
+        }
+        if(typeof document.onselectstart!="undefined")
+        {
+            document.onselectstart=new Function ("return false")
+        }
+        else
+        {
+            document.onmousedown=disableselect;
+            document.onmouseup=reEnable;
+        }
+    </script>
+    <script>
+        function stars(){
+            const count = 200;
+            const section = document.querySelector('section');
+            var i = 0;
+    
+            while (i < count){
+                const star = document.createElement('i');
+                const x = Math.floor(Math.random() * window.innerWidth)
+                const y = Math.floor(Math.random() * window.innerHeight)
+    
+                const size = Math.random() * 4;
+                star.style.left = x+'px';
+                star.style.top = y+'px';
+                star.style.width = 1+size+'px';
+                star.style.height = 1+size+'px';
+
+                const duration = Math.random() * 2;
+
+                star.style.animationDuration = 2+duration+'s';
+                star.style.animationDelay = duration+'s';
+    
+                section.appendChild(star); 
+                i++
+            }
+        }
+        stars();
+    </script>
 </body>
 </html>
