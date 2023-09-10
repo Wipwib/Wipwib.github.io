@@ -30,10 +30,13 @@ body {
 
 .top_b {
   color: aliceblue;
+  margin-top: -20px;
+  margin-right: 245px;
 }
 
 .iconA {
   margin: 10px;
+  margin-top: -10px;
 }
 
 .logo {
@@ -44,4 +47,19 @@ body {
   background-size: contain;
   margin: auto;
   margin-top: 30px;
+}
+
+@media screen and (max-width: 600px)
+{
+  .top{
+    font-size: 56px;
+  }
+  .top_b{
+    font-size: 14px;
+    margin-top: -15px;
+    margin-right: 115px;
+  }
+  .iconA{
+    margin: 7px;
+  }
 }
