@@ -25,82 +25,74 @@ section {
   overflow: hidden;
 }
 
-h1 {
+text.text1 {
+  animation: colorRotate 2s linear 0s infinite;
+}
+
+text.text2 {
+  animation: colorRotate 1s linear 0s infinite;
+}
+
+h1.H1 {
   color: #ffffff;
   font-weight: bold;
-  font-size: 90px;
+  font-size: 12vh;
   text-shadow: -1px -1px 0 #000000e1, 1px -1px 0 #000000e1, -1px 1px 0 #000000e1, 1px 1px 0 #000000e1;
 }
 
-h2 {
-  margin-top: -10px;
-  margin-left: 3px;
-  font-size: 18px;
-  color: #ff4ff6e1;
+h1.H2 {
+  margin-top: -1vh;
+  margin-left: 0.5vh;
+  font-size: 2.2vh;
+  color: #ffffff;
   text-shadow: -1px -1px 0 #000000e1, 1px -1px 0 #000000e1, -1px 1px 0 #000000e1, 1px 1px 0 #000000e1;
+}
+
+.header{
+  margin-bottom: 1vh;
 }
 
 .social {
-  align-items: center;
-  margin-left: 2vh;
-  
+  display: flex;
+  justify-content: center;
 }
 
 .icon {
-  margin: 10px;
-  width: 60px;
-  height: 60px;
-}
-
-@media screen and (max-width: 1000px){
-  .header{
-    margin-top: -25vh;
-  }
-  .social{
-    position: absolute;
-    align-items: center;
-    margin-top: 5vh;
-    margin-left: 0vh;
-  }
+  margin: 1.2vh;
+  width: 7vh;
+  height: 7vh;
 }
 
 @media screen and (max-width: 600px){
-  .header{
-    margin-top: -25vh;
+  h1.H1{
+    font-size: 7.7vh;
   }
-  h1{
-    font-size: 64px;
-  }
-  h2{
-    font-size: 14px;
-  }
-  .social{
-    position: absolute;
-    align-items: center;
-    margin-left: 0vh;
+  h1.H2{
+    font-size: 2.2vh;
+    text-align: center;
   }
   .icon{
-    margin: 7px;
-    width: 50px;
-    height: 50px;
+    margin: 1vh;
+    width: 6vh;
+    height: 6vh;
   }
 }
 
-@media screen and (max-width: 400px){
-  .header{
-    margin-top: -15vh;
+@media screen and (max-width: 300px){
+  h1.H1{
+    font-size: 6.7vh;
+    text-align: center;
   }
-  h1{
-    font-size: 42px;
-  }
-  h2{
-    margin-top: -5px;
-    font-size: 14px;
+  h1.H2{
+    margin-top: 0vh;
+    margin-left: 0vh;
+    font-size: 2.2vh;
+    text-align: center;
   }
   .icon{
-    margin: 4px;
-    width: 37px;
-    height: 37px;
+    margin: 1vh;
+    width: 6vh;
+    height: 6vh;
   }
 }
 
@@ -119,4 +111,22 @@ section i{
   10%{opacity: 1;}
   90%{opacity: 1;}
   100%{opacity: 0;}
+}
+
+@keyframes colorRotate {
+  from {
+    color: #6666ff;
+  }
+  10% {
+    color: #0099ff;
+  }
+  50% {
+    color: #00ff00;
+  }
+  75% {
+    color: #ff3399;
+  }
+  100% {
+    color: #6666ff;
+  }
 }
