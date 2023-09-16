@@ -106,6 +106,7 @@ section i{
   0 0 80px #FFF;
   animation: animate linear infinite;
 }
+
 @keyframes animate{
   0%{opacity: 0;}
   10%{opacity: 1;}
